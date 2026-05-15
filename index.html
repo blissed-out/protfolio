@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,13 +58,42 @@
       </video>
       <div class="hero-overlay"></div>
 
-      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up">
+      <!-- Nature Elements -->
+      <div class="hero-nature" aria-hidden="true">
+        <div class="nature-leaf nl-1"></div>
+        <div class="nature-leaf nl-2"></div>
+        <div class="nature-leaf nl-3"></div>
+        <div class="nature-leaf nl-4"></div>
+        <div class="nature-leaf nl-5"></div>
+        <div class="nature-leaf nl-6"></div>
+        <div class="nature-leaf nl-7"></div>
+        <div class="nature-leaf nl-8"></div>
+        <div class="ambient-firefly af-1"></div>
+        <div class="ambient-firefly af-2"></div>
+        <div class="ambient-firefly af-3"></div>
+        <div class="ambient-firefly af-4"></div>
+        <div class="ambient-firefly af-5"></div>
+        <div class="ambient-firefly af-6"></div>
+        <div class="ambient-firefly af-7"></div>
+        <div class="ambient-firefly af-8"></div>
+      </div>
+
+      <div class="container d-flex flex-column align-items-center justify-content-center text-center">
         <div class="hero-status glass-panel">
           <span class="status-dot"></span>
           <span>Work in Progress</span>
           <span class="status-note">living draft</span>
         </div>
         <h2 class="hero-title">Aadarsh Banjade</h2>
+        <svg class="hero-vine-accent" viewBox="0 0 240 28" aria-hidden="true">
+          <path class="vine-stem" d="M20,14 C50,6 70,22 100,14 S150,6 180,14 S210,22 220,14" stroke="rgba(139,204,155,0.35)" fill="none" stroke-width="1" stroke-linecap="round"/>
+          <path d="M60,14 C64,7 72,7 76,14" fill="rgba(139,204,155,0.18)" stroke="none"/>
+          <path d="M130,14 C126,21 118,21 114,14" fill="rgba(139,204,155,0.15)" stroke="none"/>
+          <path d="M185,14 C189,7 197,7 201,14" fill="rgba(139,204,155,0.18)" stroke="none"/>
+          <circle cx="40" cy="10" r="1.5" fill="rgba(168,216,65,0.3)"/>
+          <circle cx="100" cy="14" r="1.2" fill="rgba(139,204,155,0.25)"/>
+          <circle cx="160" cy="18" r="1.5" fill="rgba(168,216,65,0.3)"/>
+        </svg>
         <p class="hero-aspirant">Research <span class="aspirant">Aspirant</span></p>
         <p class="hero-flow">Building a living mathematical world-model.</p>
         <p class="hero-stream"><span class="typed" data-typed-items="World-modeling, Math-first learning, Deep work, Eco-centric AI"></span></p>
@@ -81,7 +110,7 @@
         </div>
         <div class="about-banner-overlay"></div>
         <div class="container">
-          <div class="about-banner-content" data-aos="fade-up">
+          <div class="about-banner-content">
             <div class="about-banner-card">
               <span class="cinematic-label">About</span>
               <h2 class="cinematic-title about-title">From Software Developer<br><span class="cinematic-accent">to AI Research</span></h2>
@@ -110,7 +139,7 @@
         <img src="https://cdn-ildmfoi.nitrocdn.com/qYRgaQhFZwgLVqelZmqPIMtFINKxcsKK/assets/images/optimized/rev-15cb4a5/atomhawk.com/wp-content/uploads/2022/06/JessicaWoulfe-1.jpg.webp" alt="" loading="lazy">
       </div>
       <div class="cinematic-overlay cinematic-overlay--left"></div>
-      <div class="cinematic-content cinematic-content--left" data-aos="fade-right" data-aos-duration="1200">
+      <div class="cinematic-content cinematic-content--left">
         <span class="cinematic-label">Philosophy</span>
         <h2 class="cinematic-title">Eco-Centric AI<br><span class="cinematic-accent">&amp; Solarpunk</span></h2>
         <p class="cinematic-desc">Exploring how artificial intelligence can be deeply integrated with ecological sustainability and human well-being, moving beyond mere technological advancement.</p>
@@ -123,7 +152,7 @@
         <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*pnnK3axsI0kVipdvKCCunA.jpeg" alt="" loading="lazy">
       </div>
       <div class="cinematic-overlay cinematic-overlay--right"></div>
-      <div class="cinematic-content cinematic-content--right" data-aos="fade-left" data-aos-duration="1200">
+      <div class="cinematic-content cinematic-content--right">
         <span class="cinematic-label">Writing</span>
         <h2 class="cinematic-title">Notes<br><span class="cinematic-accent">&amp; Essays</span></h2>
         <p class="cinematic-desc">Essays on deep work, reflections on ML papers, and thoughts on building a meaningful life alongside technology.</p>
@@ -146,7 +175,7 @@
         <img src="https://storiesfromtomorrow.com/wp-content/uploads/2024/06/b05b1d0f-9a20-45ed-ad94-78f225b3a947.png?w=NaN&amp;h=" alt="" loading="lazy">
       </div>
       <div class="cinematic-overlay cinematic-overlay--left"></div>
-      <div class="cinematic-content cinematic-content--left contact-content" data-aos="fade-right" data-aos-duration="1200">
+      <div class="cinematic-content cinematic-content--left contact-content">
         <span class="cinematic-label">Contact</span>
         <h2 class="cinematic-title">Contact<br><span class="cinematic-accent">Open Channel</span></h2>
         <p class="cinematic-desc">Always open to conversations about math, AI research, solarpunk futures, and technology that helps life flourish.</p>
@@ -210,10 +239,13 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <!-- Firefly Cursor -->
+  <div class="firefly-cursor" id="fireflyCursor" aria-hidden="true"></div>
+
   <div class="sound-prompt is-visible" data-sound-prompt role="button" tabindex="0" aria-label="Click to begin" aria-live="polite">
     <span>Click to begin</span>
   </div>
-  <audio id="end-titles-audio" src="assets/audio/end-titles.mp3" preload="auto" loop></audio>
+  <audio id="end-titles-audio" preload="auto"></audio>
   <button type="button" class="sound-toggle is-playing" data-sound-toggle aria-label="Pause End Titles" aria-pressed="true" title="Pause End Titles">
     <i class="bi bi-volume-up" aria-hidden="true"></i>
   </button>
