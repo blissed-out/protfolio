@@ -55,6 +55,23 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
+      <!-- Firefly canvas -->
+      <canvas id="nature-canvas" aria-hidden="true"></canvas>
+
+      <!-- Floating leaf decorations -->
+      <svg class="leaf-float leaf-float--1" aria-hidden="true" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 75 C10 60, 2 35, 15 15 C20 5, 35 2, 45 12 C58 25, 55 55, 30 75Z" fill="none" stroke="rgba(139,204,155,0.22)" stroke-width="1.2"/>
+        <path d="M30 75 C30 50, 28 25, 15 15" fill="none" stroke="rgba(139,204,155,0.15)" stroke-width="0.8"/>
+      </svg>
+      <svg class="leaf-float leaf-float--2" aria-hidden="true" viewBox="0 0 50 70" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 65 C8 50, 2 28, 12 12 C18 3, 30 1, 38 10 C50 22, 46 48, 25 65Z" fill="none" stroke="rgba(63,125,94,0.28)" stroke-width="1"/>
+        <path d="M25 65 C25 42, 22 20, 12 12" fill="none" stroke="rgba(63,125,94,0.18)" stroke-width="0.7"/>
+      </svg>
+      <svg class="leaf-float leaf-float--3" aria-hidden="true" viewBox="0 0 45 65" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 60 C5 46, 1 25, 10 10 C16 1, 28 0, 36 9 C46 21, 42 44, 22 60Z" fill="rgba(139,204,155,0.04)" stroke="rgba(139,204,155,0.2)" stroke-width="1"/>
+        <path d="M22 60 C22 40, 19 18, 10 10" fill="none" stroke="rgba(139,204,155,0.12)" stroke-width="0.7"/>
+      </svg>
+
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up">
         <div class="hero-status">
           <span class="status-dot"></span>
@@ -68,6 +85,23 @@
       </div>
 
     </section><!-- /Hero Section -->
+
+    <!-- Organic divider hero → about -->
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,55 C120,80 240,20 360,45 C480,70 600,30 720,50 C840,70 960,25 1080,48 C1200,70 1320,35 1440,55 L1440,90 L0,90Z" fill="var(--about-bg, #f4f7f1)"/>
+        <!-- tiny branch strokes -->
+        <line x1="200" y1="55" x2="215" y2="38" stroke="rgba(63,125,94,0.18)" stroke-width="1"/>
+        <line x1="215" y1="38" x2="225" y2="28" stroke="rgba(63,125,94,0.14)" stroke-width="0.8"/>
+        <line x1="215" y1="38" x2="228" y2="40" stroke="rgba(63,125,94,0.12)" stroke-width="0.7"/>
+        <line x1="700" y1="50" x2="712" y2="32" stroke="rgba(139,204,155,0.2)" stroke-width="1"/>
+        <line x1="712" y1="32" x2="720" y2="20" stroke="rgba(139,204,155,0.15)" stroke-width="0.8"/>
+        <line x1="712" y1="32" x2="726" y2="35" stroke="rgba(139,204,155,0.12)" stroke-width="0.7"/>
+        <line x1="1100" y1="48" x2="1115" y2="30" stroke="rgba(63,125,94,0.18)" stroke-width="1"/>
+        <line x1="1115" y1="30" x2="1122" y2="18" stroke="rgba(63,125,94,0.13)" stroke-width="0.8"/>
+        <line x1="1115" y1="30" x2="1130" y2="33" stroke="rgba(63,125,94,0.11)" stroke-width="0.7"/>
+      </svg>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -283,6 +317,30 @@
   </main>
 
   <footer id="footer" class="footer">
+    <!-- Mycelium roots SVG -->
+    <div class="footer-roots" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- root-like branching lines from center -->
+        <line x1="720" y1="0"  x2="580" y2="35" stroke="rgba(139,204,155,0.18)" stroke-width="1.2"/>
+        <line x1="580" y1="35" x2="480" y2="55" stroke="rgba(139,204,155,0.13)" stroke-width="0.9"/>
+        <line x1="580" y1="35" x2="520" y2="58" stroke="rgba(139,204,155,0.10)" stroke-width="0.7"/>
+        <line x1="480" y1="55" x2="420" y2="60" stroke="rgba(139,204,155,0.09)" stroke-width="0.6"/>
+        <line x1="720" y1="0"  x2="860" y2="35" stroke="rgba(139,204,155,0.18)" stroke-width="1.2"/>
+        <line x1="860" y1="35" x2="960" y2="55" stroke="rgba(139,204,155,0.13)" stroke-width="0.9"/>
+        <line x1="860" y1="35" x2="920" y2="58" stroke="rgba(139,204,155,0.10)" stroke-width="0.7"/>
+        <line x1="960" y1="55" x2="1020" y2="60" stroke="rgba(139,204,155,0.09)" stroke-width="0.6"/>
+        <line x1="720" y1="0"  x2="720" y2="40" stroke="rgba(63,125,94,0.15)" stroke-width="1"/>
+        <line x1="720" y1="40" x2="700" y2="60" stroke="rgba(63,125,94,0.10)" stroke-width="0.7"/>
+        <line x1="720" y1="40" x2="740" y2="60" stroke="rgba(63,125,94,0.10)" stroke-width="0.7"/>
+        <!-- tiny spore dots -->
+        <circle cx="420" cy="60" r="2" fill="rgba(139,204,155,0.22)"/>
+        <circle cx="520" cy="58" r="1.5" fill="rgba(139,204,155,0.18)"/>
+        <circle cx="700" cy="60" r="1.8" fill="rgba(63,125,94,0.20)"/>
+        <circle cx="740" cy="60" r="1.8" fill="rgba(63,125,94,0.20)"/>
+        <circle cx="920" cy="58" r="1.5" fill="rgba(139,204,155,0.18)"/>
+        <circle cx="1020" cy="60" r="2" fill="rgba(139,204,155,0.22)"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="footer-content text-center">
         <p>Aadarsh Banjade &mdash; Nepal</p>
@@ -304,6 +362,89 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Nature Canvas -->
+  <script>
+  (function() {
+    // ── Firefly / spore system for the hero ──────────────────────────
+    const canvas = document.getElementById('nature-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width  = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    const COUNT = 68;
+    const particles = [];
+
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+
+    class Spore {
+      constructor() { this.reset(true); }
+      reset(init) {
+        this.x    = rand(0, canvas.width);
+        this.y    = init ? rand(0, canvas.height) : canvas.height + 10;
+        this.r    = rand(1.2, 3.2);
+        this.vy   = rand(-0.35, -0.9);
+        this.vx   = rand(-0.18, 0.18);
+        this.life = 0;
+        this.maxLife = rand(220, 480);
+        // green-gold firefly palette
+        const hue = rand(100, 148);
+        this.color = `hsla(${hue}, 72%, 68%, `;
+      }
+      update() {
+        this.x += this.vx + Math.sin(this.life * 0.022) * 0.3;
+        this.y += this.vy;
+        this.life++;
+        if (this.life > this.maxLife || this.y < -10) this.reset(false);
+      }
+      draw() {
+        const t = this.life / this.maxLife;
+        // fade in then out
+        const alpha = t < 0.15 ? t / 0.15 : t > 0.75 ? (1 - t) / 0.25 : 1;
+        // soft glow
+        const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r * 3.5);
+        g.addColorStop(0,   this.color + (alpha * 0.95) + ')');
+        g.addColorStop(0.4, this.color + (alpha * 0.35) + ')');
+        g.addColorStop(1,   this.color + '0)');
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r * 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = g;
+        ctx.fill();
+        // bright core
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r * 0.6, 0, Math.PI * 2);
+        ctx.fillStyle = this.color + (alpha * 0.9) + ')';
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < COUNT; i++) particles.push(new Spore());
+
+    function loop() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    // ── Parallax leaves on scroll ─────────────────────────────────────
+    const leaves = document.querySelectorAll('.leaf-float');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      leaves.forEach((el, i) => {
+        const speed = 0.06 + i * 0.025;
+        const rotate = y * (0.02 + i * 0.008);
+        el.style.transform = `translateY(${y * speed}px) rotate(${rotate}deg)`;
+      });
+    });
+  })();
+  </script>
 
 </body>
 

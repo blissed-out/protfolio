@@ -415,17 +415,6 @@ section,
   background: radial-gradient(ellipse at 55% 35%, #254b31 0%, #0f1c14 58%, #09130d 100%);
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(139, 204, 155, 0.16) 1px, transparent 0);
-  background-size: 34px 34px;
-  pointer-events: none;
-  opacity: 0.7;
-}
-
 .hero::after {
   content: "";
   position: absolute;
@@ -862,8 +851,136 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details (kept for reference page)
+# Nature / Alive Elements
 --------------------------------------------------------------*/
+
+/* ── Firefly canvas ── */
+#nature-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Organic noise overlay on hero ── */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* SVG noise filter via data URI */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: 1;
+}
+
+/* ── Floating leaf SVGs ── */
+.leaf-float {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.leaf-float--1 {
+  width: clamp(80px, 10vw, 140px);
+  top: 12%;
+  left: 4%;
+  opacity: 0.7;
+  animation: leaf-sway 9s ease-in-out infinite;
+}
+
+.leaf-float--2 {
+  width: clamp(60px, 8vw, 110px);
+  top: 55%;
+  right: 6%;
+  opacity: 0.55;
+  animation: leaf-sway 12s ease-in-out infinite reverse;
+}
+
+.leaf-float--3 {
+  width: clamp(50px, 6vw, 90px);
+  top: 30%;
+  right: 18%;
+  opacity: 0.45;
+  animation: leaf-sway 15s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+@keyframes leaf-sway {
+  0%   { transform: rotate(-4deg) translateY(0px); }
+  33%  { transform: rotate(3deg) translateY(-8px); }
+  66%  { transform: rotate(-2deg) translateY(-4px); }
+  100% { transform: rotate(-4deg) translateY(0px); }
+}
+
+/* ── Organic section divider ── */
+.section-divider {
+  position: relative;
+  margin-bottom: -2px;
+  line-height: 0;
+  overflow: hidden;
+  background: var(--hero-bg, #0f1c14);
+}
+
+.section-divider svg {
+  display: block;
+  width: 100%;
+  height: clamp(40px, 6vw, 90px);
+}
+
+/* ── Moss glow on cards ── */
+.curriculum-item,
+.now-item {
+  position: relative;
+}
+
+.curriculum-item::before,
+.now-item::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 30% 40%, rgba(139, 204, 155, 0.18), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.curriculum-item:hover::before,
+.now-item:hover::before {
+  opacity: 1;
+}
+
+/* ensure card content is above glow */
+.curriculum-item > *,
+.now-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Footer mycelium roots ── */
+.footer-roots {
+  line-height: 0;
+  margin-bottom: -1px;
+  overflow: hidden;
+}
+
+.footer-roots svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/*--------------------------------------------------------------
+# End Nature Elements
+--------------------------------------------------------------*/
+
 .portfolio-details .portfolio-details-slider img { width: 100%; }
 
 .portfolio-details .swiper-wrapper { height: auto; }
