@@ -1,12 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Leaf favicon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Solarpunk / Tech-Nature Favicon -->
   <defs>
-    <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8bcc9b"/>
-      <stop offset="100%" stop-color="#2f6b4f"/>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3f7d5e" />
+      <stop offset="100%" stop-color="#8bcc9b" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#0f1c14"/>
-  <path d="M48 14c-12 1-22 8-27 18-4 7-2 15 5 19 8 5 20 1 26-10 5-9 4-19-4-27z" fill="url(#leafGradient)"/>
-  <path d="M22 44c9-8 16-15 25-22" fill="none" stroke="#e7f6eb" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="21" cy="45" r="3" fill="#e7f6eb"/>
+  <!-- Geometric Leaf Base -->
+  <path d="M50 5 C75 25, 95 50, 50 95 C5 50, 25 25, 50 5 Z" fill="url(#grad)" opacity="0.9" />
+  <!-- Circuit/Tech Nodes inside -->
+  <circle cx="50" cy="70" r="6" fill="#fff" />
+  <circle cx="35" cy="45" r="4" fill="#fff" />
+  <circle cx="65" cy="45" r="4" fill="#fff" />
+  <path d="M50 70 L50 30 M35 45 L50 60 L65 45" stroke="#fff" stroke-width="2" fill="none" />
+  <circle cx="50" cy="30" r="4" fill="#fff" />
 </svg>

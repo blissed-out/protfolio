@@ -1,0 +1,27 @@
+# Refinement Plan
+
+1.  **Hero Section Video:**
+    *   Remove the `nature-canvas` (fireflies) and `.leaf-float` SVGs from `index.html`.
+    *   Add a `<video>` tag for `assets/vid/windy.mp4` to loop muted in the background of the `#hero` section.
+    *   Add a dark overlay to `#hero` to ensure text legibility while keeping the video visible.
+    *   Adjust hero text typography for a subtle "glass/glow" effect.
+
+2.  **About Section (Content Reduction & Focus):**
+    *   Reduce the 4 paragraphs to a concise, poetic statement.
+    *   Focus on the transition from software dev to AI, the slow/deep thinking approach.
+    *   Mention being inspired by Demis [Hassabis], Ilya [Sutskever], and Yann LeCun to contribute to something bigger.
+    *   Mention the inspiration from solarpunk for "eco-centric AI" and aligning with humans and nature.
+
+3.  **Curriculum Section Replacement (Values & Writings):**
+    *   Remove the current `#curriculum` section entirely.
+    *   Replace the `#now` section with a section that combines what you are doing, your values (eco-centric AI, solarpunk inspiration), and your writings/blogs.
+    *   Use the "glassmorphism" aesthetic for these cards.
+
+4.  **Glassmorphism & Organic Design (CSS):**
+    *   Introduce `backdrop-filter: blur(10px)` to the `.about`, new `.now` / `.values` / `.writings` sections.
+    *   Change card backgrounds from solid colors to `rgba(255, 255, 255, 0.1)` (or similar dark/light variants depending on the theme).
+    *   Increase `border-radius` to make things feel more organic (e.g., `20px` or even slightly asymmetrical).
+    *   Add more padding/margin for "breathing room".
+
+5.  **Remove/Update Navigation:**
+    *   Update the nav links to match the new sections (Home, About, Writings/Values, Contact).

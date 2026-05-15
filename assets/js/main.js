@@ -48,6 +48,80 @@
   }
 
   /**
+   * End Titles sound toggle
+   */
+  const soundToggle = document.querySelector('[data-sound-toggle]');
+  const soundPrompt = document.querySelector('[data-sound-prompt]');
+  const endTitlesAudio = document.querySelector('#end-titles-audio');
+
+  function setSoundPromptVisible(isVisible) {
+    if (!soundPrompt) return;
+    soundPrompt.classList.toggle('is-visible', isVisible);
+    soundPrompt.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+    soundPrompt.tabIndex = isVisible ? 0 : -1;
+  }
+
+  function setSoundToggleState(isPlaying) {
+    if (!soundToggle) return;
+    const icon = soundToggle.querySelector('i');
+    soundToggle.classList.toggle('is-playing', isPlaying);
+    soundToggle.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+    soundToggle.setAttribute('aria-label', isPlaying ? 'Pause End Titles' : 'Play End Titles');
+    soundToggle.setAttribute('title', isPlaying ? 'Pause End Titles' : 'Play End Titles');
+    if (icon) {
+      icon.className = isPlaying ? 'bi bi-volume-up' : 'bi bi-volume-mute';
+    }
+  }
+
+  if (soundToggle && endTitlesAudio) {
+    endTitlesAudio.volume = 0.38;
+
+    function playEndTitles(options = {}) {
+      const { keepPromptOnBlock = true } = options;
+      return endTitlesAudio.play()
+        .then(() => {
+          setSoundToggleState(true);
+          setSoundPromptVisible(false);
+        })
+        .catch(() => {
+          setSoundToggleState(true);
+          setSoundPromptVisible(keepPromptOnBlock);
+        });
+    }
+
+    setSoundToggleState(true);
+    setSoundPromptVisible(true);
+
+    function beginFromPrompt() {
+      if (soundToggle.getAttribute('aria-pressed') === 'true' && endTitlesAudio.paused) {
+        playEndTitles();
+      }
+    }
+
+    if (soundPrompt) {
+      soundPrompt.addEventListener('click', beginFromPrompt);
+      soundPrompt.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          beginFromPrompt();
+        }
+      });
+    }
+
+    soundToggle.addEventListener('click', () => {
+      if (endTitlesAudio.paused) {
+        playEndTitles({ keepPromptOnBlock: false });
+      } else {
+        endTitlesAudio.pause();
+        setSoundToggleState(false);
+        setSoundPromptVisible(false);
+      }
+    });
+    endTitlesAudio.addEventListener('ended', () => setSoundToggleState(false));
+    endTitlesAudio.addEventListener('pause', () => setSoundToggleState(false));
+  }
+
+  /**
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
@@ -133,5 +207,28 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Section dots scrollspy
+   */
+  const sectionDots = document.querySelectorAll('.section-dot');
+
+  function sectionDotsScrollspy() {
+    sectionDots.forEach(dot => {
+      const sectionId = dot.getAttribute('data-section');
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      const position = window.scrollY + window.innerHeight / 2;
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        sectionDots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      }
+    });
+  }
+
+  if (sectionDots.length) {
+    window.addEventListener('load', sectionDotsScrollspy);
+    document.addEventListener('scroll', sectionDotsScrollspy);
+  }
 
 })();

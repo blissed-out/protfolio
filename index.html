@@ -9,14 +9,13 @@
   <meta name="keywords" content="AI research, machine learning, mathematics, Aadarsh Banjade">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml">
   <link href="assets/img/favicon.png" rel="icon" type="image/png">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,15 +32,14 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">ab.</h1>
+        <h1 class="sitename">AADARSH BANJADE</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#curriculum">Curriculum</a></li>
-          <li><a href="#now">Now</a></li>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#writing">Writing</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -55,244 +53,103 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <!-- Firefly canvas -->
-      <canvas id="nature-canvas" aria-hidden="true"></canvas>
-
-      <!-- Floating leaf decorations -->
-      <svg class="leaf-float leaf-float--1" aria-hidden="true" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30 75 C10 60, 2 35, 15 15 C20 5, 35 2, 45 12 C58 25, 55 55, 30 75Z" fill="none" stroke="rgba(139,204,155,0.22)" stroke-width="1.2"/>
-        <path d="M30 75 C30 50, 28 25, 15 15" fill="none" stroke="rgba(139,204,155,0.15)" stroke-width="0.8"/>
-      </svg>
-      <svg class="leaf-float leaf-float--2" aria-hidden="true" viewBox="0 0 50 70" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25 65 C8 50, 2 28, 12 12 C18 3, 30 1, 38 10 C50 22, 46 48, 25 65Z" fill="none" stroke="rgba(63,125,94,0.28)" stroke-width="1"/>
-        <path d="M25 65 C25 42, 22 20, 12 12" fill="none" stroke="rgba(63,125,94,0.18)" stroke-width="0.7"/>
-      </svg>
-      <svg class="leaf-float leaf-float--3" aria-hidden="true" viewBox="0 0 45 65" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22 60 C5 46, 1 25, 10 10 C16 1, 28 0, 36 9 C46 21, 42 44, 22 60Z" fill="rgba(139,204,155,0.04)" stroke="rgba(139,204,155,0.2)" stroke-width="1"/>
-        <path d="M22 60 C22 40, 19 18, 10 10" fill="none" stroke="rgba(139,204,155,0.12)" stroke-width="0.7"/>
-      </svg>
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="assets/vid/windy.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up">
-        <div class="hero-status">
+        <div class="hero-status glass-panel">
           <span class="status-dot"></span>
           <span>Work in Progress</span>
           <span class="status-note">living draft</span>
         </div>
-        <h2>Aadarsh Banjade</h2>
+        <h2 class="hero-title">Aadarsh Banjade</h2>
         <p class="hero-aspirant">Research <span class="aspirant">Aspirant</span></p>
-        <p class="hero-flow">Building a living mathematical world-model, one concept at a time.</p>
-        <p class="hero-stream"><span class="typed" data-typed-items="World-modeling in progress,Math-first learning,Questions before answers"></span></p>
+        <p class="hero-flow">Building a living mathematical world-model.</p>
+        <p class="hero-stream"><span class="typed" data-typed-items="World-modeling, Math-first learning, Deep work, Eco-centric AI"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
 
-    <!-- Organic divider hero → about -->
-    <div class="section-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,55 C120,80 240,20 360,45 C480,70 600,30 720,50 C840,70 960,25 1080,48 C1200,70 1320,35 1440,55 L1440,90 L0,90Z" fill="var(--about-bg, #f4f7f1)"/>
-        <!-- tiny branch strokes -->
-        <line x1="200" y1="55" x2="215" y2="38" stroke="rgba(63,125,94,0.18)" stroke-width="1"/>
-        <line x1="215" y1="38" x2="225" y2="28" stroke="rgba(63,125,94,0.14)" stroke-width="0.8"/>
-        <line x1="215" y1="38" x2="228" y2="40" stroke="rgba(63,125,94,0.12)" stroke-width="0.7"/>
-        <line x1="700" y1="50" x2="712" y2="32" stroke="rgba(139,204,155,0.2)" stroke-width="1"/>
-        <line x1="712" y1="32" x2="720" y2="20" stroke="rgba(139,204,155,0.15)" stroke-width="0.8"/>
-        <line x1="712" y1="32" x2="726" y2="35" stroke="rgba(139,204,155,0.12)" stroke-width="0.7"/>
-        <line x1="1100" y1="48" x2="1115" y2="30" stroke="rgba(63,125,94,0.18)" stroke-width="1"/>
-        <line x1="1115" y1="30" x2="1122" y2="18" stroke="rgba(63,125,94,0.13)" stroke-width="0.8"/>
-        <line x1="1115" y1="30" x2="1130" y2="33" stroke="rgba(63,125,94,0.11)" stroke-width="0.7"/>
-      </svg>
-    </div>
-
     <!-- About Section -->
     <section id="about" class="about section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="section-title">
-          <h2>About</h2>
+      <div class="about-banner">
+        <div class="about-banner-bg">
+          <img src="https://giveth.mypinata.cloud/ipfs/QmXp58djSMYj7FUPjCVkKG9XV2SG3dWisXKvvwTum3YzcH" crossorigin="anonymous" alt="">
         </div>
-
-        <div class="row gy-5 align-items-start">
-
-          <div class="col-lg-4 col-md-5 text-center text-md-start">
-            <img src="assets/img/profile-img.png" class="img-fluid about-profile-img" alt="Aadarsh Banjade">
-            <div class="about-links mt-4">
-              <a href="mailto:aadarshbanjade.computer@gmail.com" class="about-link-item">
-                <i class="bi bi-envelope"></i>
-                <span>aadarshbanjade.computer@gmail.com</span>
-              </a>
-              <a href="https://github.com/blissed-out" target="_blank" rel="noopener" class="about-link-item">
-                <i class="bi bi-github"></i>
-                <span>github.com/blissed-out</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-8 col-md-7">
-            <div class="about-me">
-              <p>
-                I'm a self-taught software developer who spent years building full-stack systems and web applications. Recently I made a deliberate choice to step away from professional software development and redirect my energy toward something I find deeply compelling — AI research.
-              </p>
-              <p>
-                Right now I'm at the very beginning: rebuilding mathematical foundations from scratch. Calculus, linear algebra, probability. The kind of math I skipped past to get to code quickly. Turns out, you eventually have to come back for it.
-              </p>
-              <p>
-                The goal is to eventually read, understand, and contribute to machine learning research. I don't know exactly what area yet — I'm early enough that I'm still figuring out what questions interest me most.
-              </p>
-              <p>
-                I write code in Neovim. I think slowly and take notes. I'm in no rush.
-              </p>
-
-              <div class="about-callout">
-                <span class="callout-label">Work in Progress</span>
-                <p>This space stays intentionally unfinished — updated as I move from intuition to math, and from notes to models.</p>
-              </div>
-
-              <div class="tag-group mt-4">
-                <span class="tag-label">tools &amp; languages</span>
+        <div class="about-banner-overlay"></div>
+        <div class="container">
+          <div class="about-banner-content" data-aos="fade-up">
+            <div class="about-banner-card">
+              <span class="cinematic-label">About</span>
+              <h2 class="cinematic-title about-title">From Software Developer<br><span class="cinematic-accent">to AI Research</span></h2>
+              <p class="cinematic-desc about-desc">Rebuilding the math beneath learning while moving slowly toward eco-centric AI research.</p>
+              <div class="tag-group">
+                <span class="tag-label">Core Tenets</span>
                 <div class="tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">C++</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">Linux</span>
-                  <span class="tag">Neovim</span>
+                  <span class="tag glass-tag">Deep Work</span>
+                  <span class="tag glass-tag">Eco-centric AI</span>
+                  <span class="tag glass-tag">Math-first</span>
+                  <span class="tag glass-tag">Slow Thinking</span>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
 
     </section><!-- /About Section -->
 
-    <!-- Curriculum Section -->
-    <section id="curriculum" class="curriculum section light-background">
+    <!-- Cinematic Focus Sections -->
 
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Curriculum</h2>
-          <p>Specific mathematical world-modeling concepts I am currently mastering.</p>
-        </div>
-
-        <div class="row g-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="curriculum-item">
-              <div class="curriculum-head">
-                <span class="curriculum-status">active</span>
-                <h3>Linear algebra &amp; geometry of representations</h3>
-              </div>
-              <ul class="curriculum-list">
-                <li>Vector spaces, basis changes, and projections</li>
-                <li>Eigenvalues, SVD, and spectral intuition</li>
-                <li>Geometry of high-dimensional data</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="curriculum-item">
-              <div class="curriculum-head">
-                <span class="curriculum-status">active</span>
-                <h3>Probability &amp; uncertainty modeling</h3>
-              </div>
-              <ul class="curriculum-list">
-                <li>Random variables, distributions, and expectation</li>
-                <li>Bayesian updates and conditional reasoning</li>
-                <li>Stochastic processes as world dynamics</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="curriculum-item">
-              <div class="curriculum-head">
-                <span class="curriculum-status">active</span>
-                <h3>Dynamics &amp; differential equations</h3>
-              </div>
-              <ul class="curriculum-list">
-                <li>Continuous-time systems and state evolution</li>
-                <li>Stability, equilibrium, and phase portraits</li>
-                <li>Discrete approximations for simulation</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="curriculum-item">
-              <div class="curriculum-head">
-                <span class="curriculum-status">active</span>
-                <h3>Optimization &amp; statistical inference</h3>
-              </div>
-              <ul class="curriculum-list">
-                <li>Loss landscapes, gradients, and convexity</li>
-                <li>Maximum likelihood and regularization</li>
-                <li>Information-theoretic views of learning</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="cinematic-section" data-section-name="philosophy">
+      <div class="cinematic-bg">
+        <img src="https://cdn-ildmfoi.nitrocdn.com/qYRgaQhFZwgLVqelZmqPIMtFINKxcsKK/assets/images/optimized/rev-15cb4a5/atomhawk.com/wp-content/uploads/2022/06/JessicaWoulfe-1.jpg.webp" alt="" loading="lazy">
       </div>
-
-    </section><!-- /Curriculum Section -->
-
-    <!-- Now Section -->
-    <section id="now" class="now section light-background">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>In Motion</h2>
-          <p>What I'm iterating on right now, with gentle forward momentum.</p>
-        </div>
-
-        <div class="row g-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="now-item">
-              <span class="now-tag">building</span>
-              <h3>Math-first foundations</h3>
-              <p>Reconstructing the core pillars with patience: analysis, linear algebra, probability, and geometry. Slow, deliberate, and note-heavy.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="now-item">
-              <span class="now-tag">mapping</span>
-              <h3>World-modeling intuition</h3>
-              <p>Connecting theory to systems that explain how things evolve. Searching for clean representations before touching code.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="now-item">
-              <span class="now-tag">shaping</span>
-              <h3>Research habits</h3>
-              <p>Reading, rewriting, and reflecting. Building a daily cadence of proofs, questions, and slow clarity.</p>
-            </div>
-          </div>
-
-        </div>
-
+      <div class="cinematic-overlay cinematic-overlay--left"></div>
+      <div class="cinematic-content cinematic-content--left" data-aos="fade-right" data-aos-duration="1200">
+        <span class="cinematic-label">Philosophy</span>
+        <h2 class="cinematic-title">Eco-Centric AI<br><span class="cinematic-accent">&amp; Solarpunk</span></h2>
+        <p class="cinematic-desc">Exploring how artificial intelligence can be deeply integrated with ecological sustainability and human well-being, moving beyond mere technological advancement.</p>
       </div>
+    </section>
 
-    </section><!-- /Now Section -->
+    <!-- Writing Section -->
+    <section id="writing" class="cinematic-section" data-section-name="writing">
+      <div class="cinematic-bg">
+        <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*pnnK3axsI0kVipdvKCCunA.jpeg" alt="" loading="lazy">
+      </div>
+      <div class="cinematic-overlay cinematic-overlay--right"></div>
+      <div class="cinematic-content cinematic-content--right" data-aos="fade-left" data-aos-duration="1200">
+        <span class="cinematic-label">Writing</span>
+        <h2 class="cinematic-title">Notes<br><span class="cinematic-accent">&amp; Essays</span></h2>
+        <p class="cinematic-desc">Essays on deep work, reflections on ML papers, and thoughts on building a meaningful life alongside technology.</p>
+        <a href="#" class="cinematic-link">COMING SOON &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Section Navigation Dots -->
+    <nav class="section-dots" id="sectionDots" aria-label="Section navigation">
+      <a href="#hero" class="section-dot active" data-section="hero"></a>
+      <a href="#about" class="section-dot" data-section="about"></a>
+      <a href="#philosophy" class="section-dot" data-section="philosophy"></a>
+      <a href="#writing" class="section-dot" data-section="writing"></a>
+      <a href="#contact" class="section-dot" data-section="contact"></a>
+    </nav>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Always open to conversations about math, ML, or research.</p>
-        </div>
-
+    <section id="contact" class="contact cinematic-section contact-cinematic" data-section-name="contact">
+      <div class="cinematic-bg contact-bg">
+        <img src="assets/img/hero-img.png" alt="" loading="lazy">
+      </div>
+      <div class="cinematic-overlay cinematic-overlay--left"></div>
+      <div class="cinematic-content cinematic-content--left contact-content" data-aos="fade-right" data-aos-duration="1200">
+        <span class="cinematic-label">Contact</span>
+        <h2 class="cinematic-title">Contact<br><span class="cinematic-accent">Open Channel</span></h2>
+        <p class="cinematic-desc">Always open to conversations about math, ML, research, and slow work that wants to become real.</p>
         <div class="contact-cards">
           <a href="mailto:aadarshbanjade.computer@gmail.com" class="contact-card">
             <i class="bi bi-envelope"></i>
@@ -309,7 +166,6 @@
             </div>
           </a>
         </div>
-
       </div>
 
     </section><!-- /Contact Section -->
@@ -354,6 +210,14 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <div class="sound-prompt is-visible" data-sound-prompt role="button" tabindex="0" aria-label="Click to begin" aria-live="polite">
+    <span>Click to begin</span>
+  </div>
+  <audio id="end-titles-audio" src="assets/audio/end-titles.mp3" preload="auto" loop></audio>
+  <button type="button" class="sound-toggle is-playing" data-sound-toggle aria-label="Pause End Titles" aria-pressed="true" title="Pause End Titles">
+    <i class="bi bi-volume-up" aria-hidden="true"></i>
+  </button>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -363,88 +227,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Nature Canvas -->
-  <script>
-  (function() {
-    // ── Firefly / spore system for the hero ──────────────────────────
-    const canvas = document.getElementById('nature-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    function resize() {
-      canvas.width  = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    const COUNT = 68;
-    const particles = [];
-
-    function rand(min, max) { return Math.random() * (max - min) + min; }
-
-    class Spore {
-      constructor() { this.reset(true); }
-      reset(init) {
-        this.x    = rand(0, canvas.width);
-        this.y    = init ? rand(0, canvas.height) : canvas.height + 10;
-        this.r    = rand(1.2, 3.2);
-        this.vy   = rand(-0.35, -0.9);
-        this.vx   = rand(-0.18, 0.18);
-        this.life = 0;
-        this.maxLife = rand(220, 480);
-        // green-gold firefly palette
-        const hue = rand(100, 148);
-        this.color = `hsla(${hue}, 72%, 68%, `;
-      }
-      update() {
-        this.x += this.vx + Math.sin(this.life * 0.022) * 0.3;
-        this.y += this.vy;
-        this.life++;
-        if (this.life > this.maxLife || this.y < -10) this.reset(false);
-      }
-      draw() {
-        const t = this.life / this.maxLife;
-        // fade in then out
-        const alpha = t < 0.15 ? t / 0.15 : t > 0.75 ? (1 - t) / 0.25 : 1;
-        // soft glow
-        const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r * 3.5);
-        g.addColorStop(0,   this.color + (alpha * 0.95) + ')');
-        g.addColorStop(0.4, this.color + (alpha * 0.35) + ')');
-        g.addColorStop(1,   this.color + '0)');
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.r * 3.5, 0, Math.PI * 2);
-        ctx.fillStyle = g;
-        ctx.fill();
-        // bright core
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.r * 0.6, 0, Math.PI * 2);
-        ctx.fillStyle = this.color + (alpha * 0.9) + ')';
-        ctx.fill();
-      }
-    }
-
-    for (let i = 0; i < COUNT; i++) particles.push(new Spore());
-
-    function loop() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => { p.update(); p.draw(); });
-      requestAnimationFrame(loop);
-    }
-    loop();
-
-    // ── Parallax leaves on scroll ─────────────────────────────────────
-    const leaves = document.querySelectorAll('.leaf-float');
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      leaves.forEach((el, i) => {
-        const speed = 0.06 + i * 0.025;
-        const rotate = y * (0.02 + i * 0.008);
-        el.style.transform = `translateY(${y * speed}px) rotate(${rotate}deg)`;
-      });
-    });
-  })();
-  </script>
+  <!-- Background Video Script (Optional) -->
 
 </body>
 
