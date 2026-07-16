@@ -156,15 +156,15 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(7, 19, 14, 0.78);
-  border-bottom-color: rgba(232, 244, 236, 0.07);
-  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.18);
+  background: rgba(7, 19, 14, 0.62);
+  border-bottom-color: rgba(232, 244, 236, 0.05);
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.12);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 
 .index-page.scrolled .header {
-  background: rgba(7, 19, 14, 0.78);
+  background: rgba(7, 19, 14, 0.68);
   border-bottom-color: rgba(232, 244, 236, 0.07);
   box-shadow: 0 2px 22px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(14px);
@@ -600,7 +600,7 @@ section,
 }
 
 .hero-title {
-  margin: 0 0 4px 0;
+  margin: 0 0 20px 0;
   font-size: 5.4rem;
   font-family: var(--nature-font);
   font-weight: 400;
@@ -662,16 +662,17 @@ section,
 
 .hero-aspirant .aspirant {
   color: #a3e0b2;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 
 .hero .hero-flow {
   margin-top: 12px;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-family: var(--default-font);
   font-weight: 400;
   font-style: normal;
+  line-height: 1.8;
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -1061,8 +1062,8 @@ section,
 }
 
 .about-banner-card p {
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 2;
   color: rgba(232, 244, 236, 0.92);
   margin-bottom: 20px;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
@@ -1280,8 +1281,8 @@ section,
 /* Description — warm, readable on any background */
 .cinematic-desc {
   font-family: var(--default-font);
-  font-size: 15px;
-  line-height: 1.95;
+  font-size: 14px;
+  line-height: 2.05;
   color: rgba(215, 230, 220, 0.82);
   margin: 0 0 28px 0;
   max-width: 400px;
