@@ -23,7 +23,7 @@
 
 /* Nav Colors */
 :root {
-  --nav-color: rgba(232, 244, 236, 0.75);
+  --nav-color: rgba(232, 244, 236, 0.65);
   --nav-hover-color: #ffffff;
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
@@ -596,7 +596,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  padding-top: 60px;
+  padding-top: 0px;
 }
 
 .hero-title {
@@ -652,7 +652,7 @@ section,
 
 .hero .hero-aspirant {
   font-family: var(--mono-font);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   font-style: normal;
   color: rgba(255, 255, 255, 0.95);
