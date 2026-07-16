@@ -55,7 +55,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: black;
   background-image: radial-gradient(circle at top left, rgba(139, 204, 155, 0.18), transparent 55%),
     radial-gradient(circle at 80% 0%, rgba(63, 125, 94, 0.16), transparent 50%);
   font-family: var(--default-font);
@@ -123,30 +123,52 @@ h1, h2, h3, h4, h5, h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #0c1711;
-  --default-color: #d8e8db;
+  --background-color: rgba(10, 22, 15, 0.52);
+  --default-color: rgba(232, 244, 236, 0.72);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 16px 0;
+  padding: 11px 0;
   transition: all 0.3s;
   z-index: 997;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(232, 244, 236, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .header .logo h1 {
-  font-size: 13px;
+  font-size: 1.15rem;
   margin: 0;
-  font-weight: 400;
-  color: var(--heading-color);
-  font-family: var(--default-font);
-  letter-spacing: 0;
-  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--heading-font);
+  letter-spacing: 0.025em;
 }
 
 .scrolled .header {
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  background-color: rgba(10, 22, 15, 0.72);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16);
+}
+
+/* Let the journal-like masthead belong to the opening landscape. */
+.index-page .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(7, 19, 14, 0.78);
+  border-bottom-color: rgba(232, 244, 236, 0.07);
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.index-page.scrolled .header {
+  background: rgba(7, 19, 14, 0.78);
+  border-bottom-color: rgba(232, 244, 236, 0.07);
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 /*--------------------------------------------------------------
@@ -162,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
   }
 
   .navmenu li { position: relative; }
@@ -170,10 +192,11 @@ h1, h2, h3, h4, h5, h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 14px;
-    padding: 6px 12px;
-    font-family: var(--mono-font);
+    font-size: 12px;
+    padding: 6px 10px;
+    font-family: var(--nav-font);
     font-weight: 400;
+    letter-spacing: 0.015em;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -185,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.045);
   }
 }
 
@@ -222,8 +245,8 @@ h1, h2, h3, h4, h5, h6 {
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
     padding: 12px 20px;
-    font-family: var(--mono-font);
-    font-size: 15px;
+    font-family: var(--nav-font);
+    font-size: 14px;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -269,17 +292,139 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #0c1711;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(63, 125, 94, 0.2), transparent 62%),
+    linear-gradient(180deg, #07120e 0%, #030805 100%);
   font-size: 13px;
-  padding: 32px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 88px 0 28px;
+  border-top: 1px solid rgba(139, 204, 155, 0.12);
 }
 
-.footer .footer-content p {
+.footer-roots {
+  position: absolute;
+  inset: -1px 0 auto;
+  width: 100%;
+  height: 68px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.footer-roots svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-closing {
+  max-width: 630px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.footer-label {
   margin: 0;
-  color: rgba(219, 232, 220, 0.65);
+  color: rgba(168, 213, 176, 0.68);
   font-family: var(--mono-font);
-  font-size: 13px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.footer-closing h2 {
+  margin: 14px 0 18px;
+  color: rgba(248, 255, 249, 0.96);
+  font-family: var(--heading-font);
+  font-size: clamp(2.65rem, 5vw, 4.25rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+}
+
+.footer-closing h2 em {
+  color: #a8d5b0;
+  font-weight: 400;
+}
+
+.footer-reflection {
+  max-width: 470px;
+  margin: 0 auto;
+  color: rgba(216, 232, 220, 0.68);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(200, 230, 204, 0.12);
+}
+
+.footer-signature {
+  margin: 0;
+  color: rgba(244, 255, 246, 0.84);
+  font-family: var(--heading-font);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.footer-signature span {
+  color: rgba(200, 230, 204, 0.48);
+  font-family: var(--default-font);
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgba(216, 232, 220, 0.62);
+  font-family: var(--default-font);
+  font-size: 12px;
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #dff5e4;
+}
+
+.footer-links i {
+  margin-left: 3px;
+  font-size: 11px;
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding-top: 76px;
+  }
+
+  .footer-closing {
+    margin-bottom: 48px;
+  }
+
+  .footer-bottom,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 10px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -420,6 +565,7 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
+  background-color: #07120e;
   padding: 0;
   display: flex;
   align-items: center;
@@ -455,7 +601,7 @@ section,
 
 .hero-title {
   margin: 0 0 4px 0;
-  font-size: 6rem;
+  font-size: 5.4rem;
   font-family: var(--nature-font);
   font-weight: 400;
   color: #ffffff;
@@ -465,8 +611,8 @@ section,
 
 .hero p {
   margin: 0;
-  font-size: 1.25rem;
-  font-family: var(--mono-font);
+  font-size: 1.15rem;
+  font-family: var(--default-font);
   color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
 }
@@ -504,9 +650,9 @@ section,
   font-size: 11px;
 }
 
-.hero-aspirant {
-  font-size: 2rem;
+.hero .hero-aspirant {
   font-family: var(--mono-font);
+  font-size: 2rem;
   font-weight: 400;
   font-style: normal;
   color: rgba(255, 255, 255, 0.95);
@@ -520,7 +666,7 @@ section,
   font-style: normal;
 }
 
-.hero-flow {
+.hero .hero-flow {
   margin-top: 12px;
   font-size: 1.15rem;
   font-family: var(--default-font);
@@ -529,7 +675,7 @@ section,
   color: rgba(255, 255, 255, 0.75);
 }
 
-.hero-stream {
+.hero .hero-stream {
   margin-top: 24px;
   font-size: 16px;
 }
@@ -1250,9 +1396,9 @@ section,
 /* Responsive — cinematic sections */
 @media (max-width: 991px) {
   .hero-title {
-    font-size: 4.25rem;
+    font-size: 3.85rem;
   }
-  .hero-aspirant {
+  .hero .hero-aspirant {
     font-size: 1.75rem;
   }
   .cinematic-content {
@@ -1289,12 +1435,12 @@ section,
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3.25rem;
+    font-size: 2.95rem;
   }
   .hero p {
     font-size: 1.05rem;
   }
-  .hero-aspirant {
+  .hero .hero-aspirant {
     font-size: 1.5rem;
   }
   .cinematic-title {
@@ -1484,7 +1630,7 @@ section,
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
   .hero-status.glass-panel {

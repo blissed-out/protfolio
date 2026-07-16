@@ -73,7 +73,7 @@
     }
   }
 
-  if (soundToggle && endTitlesAudio) {
+  if (endTitlesAudio) {
     endTitlesAudio.volume = 0.38;
 
     // Two-track random playlist
@@ -103,7 +103,7 @@
     setSoundPromptVisible(true);
 
     function beginFromPrompt() {
-      if (soundToggle.getAttribute('aria-pressed') === 'true' && endTitlesAudio.paused) {
+      if (endTitlesAudio.paused) {
         playEndTitles();
       }
     }
@@ -118,15 +118,17 @@
       });
     }
 
-    soundToggle.addEventListener('click', () => {
-      if (endTitlesAudio.paused) {
-        playEndTitles({ keepPromptOnBlock: false });
-      } else {
-        endTitlesAudio.pause();
-        setSoundToggleState(false);
-        setSoundPromptVisible(false);
-      }
-    });
+    if (soundToggle) {
+      soundToggle.addEventListener('click', () => {
+        if (endTitlesAudio.paused) {
+          playEndTitles({ keepPromptOnBlock: false });
+        } else {
+          endTitlesAudio.pause();
+          setSoundToggleState(false);
+          setSoundPromptVisible(false);
+        }
+      });
+    }
     endTitlesAudio.addEventListener('ended', () => {
       currentTrackIdx = (currentTrackIdx + 1) % trackOrder.length;
       if (currentTrackIdx === 0) {
